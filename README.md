@@ -20,7 +20,17 @@ The dataset contains over 20,000 games collected from Lichess.org using their AP
 - Game Outcomes: Winner, game duration, and victory conditions.
 - Openings: Opening names and codes (ECO format).
 
-### Methodology
+### Problem Statement
+
+Chess, with its immense decision space and strategic intricacies, provides a perfect environment for training AI. The challenges addressed in this project include:
+
+1. Training AI to evaluate and choose optimal moves in a vast decision tree.
+2. Developing strategies using historical game data and reinforcement learning.
+3. Analyzing AI's gameplay and decision-making process to identify areas of strength and improvement.
+
+These objectives are pursued with broader implications for game theory, adversarial dynamics, and cooperative problem-solving.
+
+### Solution Approach
 
 ##### 1. Exploratory Data Analysis (EDA)
 - Analyzed player ratings, victory conditions, and opening strategies.
@@ -33,15 +43,26 @@ The dataset contains over 20,000 games collected from Lichess.org using their AP
 - Trained a custom chess environment using the PPO algorithm.
 - Evaluated the model's ability to predict actions and optimize strategies.
 
-### Results
+### Key Findings
 
-##### EDA Insights:
-- The majority of games end in checkmate or resignation.
-- Certain openings, like the Slav Defense, are more successful for specific player ratings.
+MCTS and Decision-Making:
+- Effectively simulated game states to identify optimal moves.
+- Visualized how exploration and exploitation influenced decision paths.
 
-##### Reinforcement Learning:
-- The agent learned basic strategies but exhibited challenges in long-term planning.
-- Future iterations may improve performance with enhanced state representations and reward functions.
+RL Agent Performance:
+- Early stages: Frequent mistakes as the agent explored move possibilities.
+- Later stages: Improved strategic play, leveraging learned patterns for intermediate-level gameplay.
+
+Game Insights:
+- Player ratings correlate with game duration, suggesting deeper strategies among higher-rated players.
+- Draws were more frequent in balanced games with high Elo ratings.
+
+### Future Directions
+
+- Advanced Strategy Development: Extend training to include endgame scenarios and advanced tactics.
+- Real-Time Play: Enable the agent to play in live matches against human opponents.
+- Multi-Agent Learning: Explore cooperative or competitive play between multiple AI agents.
+- Explainability: Incorporate explainability tools like SHAP to better understand the agent’s decision-making.
 
 ### Source
 
